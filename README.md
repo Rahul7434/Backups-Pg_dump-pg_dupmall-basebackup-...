@@ -102,18 +102,18 @@ To restore the full cluster backup you can use psql:
 	[psql -h hostname -U username -f cluster_backup.sql]
 ```
 ```
-* pg_dumpall IN CUSTOM –F c Backup:
+* pg_dump IN CUSTOM –F c Backup:
 	[pg_restore -h hostname -U username -d database_name -F c backup.dump]
 
 *If you want to drop and recreate the database before restoring:
   pg_restore -h hostname -U username -d database_name --clean --create -F c backup.dump 
 ```
 ```
-* pg_dumpall IN CUSTOM –F t Backup:
+* pg_dump IN CUSTOM –F t Backup:
 	[pg_restore -h hostname -U username -d database_name -F t backup.tar]
 ```
 ```
-* pg_dumpall IN CUSTOM –F d Backup:
+* pg_dump IN CUSTOM –F d Backup:
 		pg_restore -h hostname -U username -d database_name -F d /path/to/directory/backup.tar
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
