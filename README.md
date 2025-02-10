@@ -26,28 +26,28 @@ Dump Options:-
     • -a, --data-only: Dumps only the data, not the schema.
         ◦ [pg_dump -U username –h host –p port –a -d database_name  -F p/t/d/c –f  data_only_backup.bak]
     • -s, --schema-only: Dumps only the schema, not the data.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name -s  -F p/t/d/c –f  data_only_backup.sql]
+        ◦ [pg_dump -U username –h host –p port -d database_name -s  -F p/t/d/c –f  data_only_backup.sql]
 
     • -t, --table=TABLE: Dumps only the specified table(s). It can be used multiple times for multiple tables.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name –t tablename  -F p/t/d/c –f  data_only_backup.baks]
+        ◦ [pg_dump -U username –h host –p port -d database_name –t tablename  -F p/t/d/c –f  data_only_backup.baks]
 
     • -n, --schema=SCHEMA: Dumps only the specified schema(s).
-        ◦ [pg_dump -U username –h host –p port –a -d database_name -n  -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port -d database_name -n schemaname -F p/t/d/c –f  data_only_backup.bak]
 
     • -T, --exclude-table=TABLE: Excludes the specified table(s) from the dump.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name –T tablename  -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port  -d database_name –T tablename  -F p/t/d/c –f  data_only_backup.bak]
 
     • -N, --exclude-schema=SCHEMA: Excludes the specified schema(s) from the dump.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name –N schemaname  -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port  -d database_name –N schemaname  -F p/t/d/c –f  data_only_backup.bak]
 
     • -x, --no-privileges: Does not dump GRANT/REVOKE statements.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name -x -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port  -d database_name -x -F p/t/d/c –f  data_only_backup.bak]
 
     • --no-owner: Do not dump ownership information.
         ◦ [pg_dump -U username –h host –p port –a -d database_name --no -F p/t/d/c –f  data_only_backup.bak]
 
     • -O, --no-reconnect: Prevents reconnection to the database.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name -O -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port  -d database_name -O -F p/t/d/c –f  data_only_backup.bak]
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Pg_dumpall: - 
