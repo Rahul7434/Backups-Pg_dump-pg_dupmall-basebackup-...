@@ -95,7 +95,7 @@ We can restore the backups using “psql”, “\i”, and “pg_restore’ util
 	Using \i command inside the psql
 	[\i 'path/to/backup_file.sql']
 ```
-###### Pg_dumpall Restoration:-
+
 ```
 * pg_dumpall Backup:
 To restore the full cluster backup you can use psql:
