@@ -46,9 +46,12 @@ Dump Options:-
     • --no-owner: Do not dump ownership information.
         ◦ [pg_dump -U username –h host –p port -d database_name --no-owner -F p/t/d/c –f  data_only_backup.bak]
 
-    --section=section: Dump only a specific section (pre-data, data, post-data).
+    --section=section: Dump only a specific section (pre-data, data, post-data).		
+		pre-data	Definitions like tables, types, functions, schemas, and basic structure
+		data	Actual table contents, large objects, and sequence values
+		post-data	Indexes, triggers, rules, constraints (like primary keys, foreign keys, etc.)
 
-    [pg_dump -U username -d dbname --section=pre-data --section=data -F p -f partial_dump.sql]
+    	[pg_dump -U username -d dbname --section=pre-data --section=data -F p -f partial_dump.sql]
 
 🧹 Metadata Control
 --no-owner: Skip ownership commands (ALTER OWNER).
