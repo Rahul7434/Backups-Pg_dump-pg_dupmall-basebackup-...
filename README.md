@@ -44,10 +44,49 @@ Dump Options:-
         ◦ [pg_dump -U username –h host –p port  -d database_name -x -F p/t/d/c –f  data_only_backup.bak]
 
     • --no-owner: Do not dump ownership information.
-        ◦ [pg_dump -U username –h host –p port –a -d database_name --no -F p/t/d/c –f  data_only_backup.bak]
+        ◦ [pg_dump -U username –h host –p port -d database_name --no-owner -F p/t/d/c –f  data_only_backup.bak]
 
     • -O, --no-reconnect: Prevents reconnection to the database.
         ◦ [pg_dump -U username –h host –p port  -d database_name -O -F p/t/d/c –f  data_only_backup.bak]
+
+🧹 Metadata Control
+--no-owner: Skip ownership commands (ALTER OWNER).
+
+--no-acl: Skip access privileges (GRANT, REVOKE).
+
+--inserts: Use INSERT statements instead of COPY.
+
+--column-inserts: Use INSERT with column names.
+
+--no-comments: Exclude comments from the dump.
+
+--no-security-labels: Skip security labels.
+
+--no-subscriptions: Skip logical replication subscriptions.
+
+🔄 Restore Behavior
+-c or --clean: Add DROP statements before CREATE.
+
+-C or --create: Include CREATE DATABASE statement.
+
+--if-exists: Use DROP IF EXISTS for objects.
+
+🚀 Performance & Parallelism
+-j njobs or --jobs=njobs: Run parallel jobs (only with directory format).
+
+--lock-wait-timeout=ms: Set timeout for locking objects.
+
+🌐 Encoding & Extensions
+-E encoding or --encoding=encoding: Set output encoding.
+
+-e extension or --extension=extension: Dump only specific extension(s).
+
+🧪 Advanced Filtering
+--exclude-table-data=table: Exclude data for specific table(s).
+
+--include-foreign-data=server: Include foreign tables from a server.
+
+--enable-row-security: Include rows protected by row-level security.
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Pg_dumpall: - 
